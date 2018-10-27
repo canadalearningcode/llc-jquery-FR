@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="framework/css/highlightjs-themes/vs.css" data-noprefix>
     <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
-    <link rel="shortcut icon" href="framework/img/favicon.ico"> 
+    <link rel="shortcut icon" href="framework/img/favicon.ico">
 
     <!-- Workshop-specific styles -->
     <link rel="stylesheet" href="framework/css/workshop.css" data-noprefix>
@@ -25,7 +25,7 @@
 </head>
 
 <!-- Timer/progress bar: Define the presentation duration using "data-duration" in minutes. -->
-<body data-duration="360"> 
+<body data-duration="360">
 
     <!-- Welcome slide -->
     <header class="slide intro first">
@@ -42,13 +42,13 @@
             </div> -->
         </div>
 
-        <div class="sponsor">
+        <!--div class="sponsor">
             <p>En partenariat avec:</p>
             <img src="framework/img/telus-logo-white.svg" alt="Telus logo">
-        </div>
+        </div-->
     </header>
 
-    <main>  
+    <main>
         <!-- Instructor info -->
         <section class="slide intro">
             <img class="logo" src="framework/img/logo-llc-white.png" alt="Ladies Learning Code logo">
@@ -66,7 +66,20 @@
                     <li><i class="fa fa-twitter"></i><a href="http://twitter.com/">@twitter</a></li>
                 </ul> -->
             </div>
-        </section> 
+        </section>
+
+        <section class="slide" data-markdown data-toc>
+          <script type="text/template">
+            #Le code des programmeuses
+
+            1. Soyez enthousiastes et accueillantes
+            1. Respectez les autres en choisissant bien vos mots et vos actions
+            1. Respectez l'espace des autres pendant les discussions
+            1. Posez des questions
+            1. Faites de votre mieux (et amusez-vous!)
+
+          </script>
+        </section>
 
         <section class="slide centered" data-markdown>
             ## Notre projet d'aujourd'hui
@@ -85,7 +98,7 @@ Vous aurez besoin :
 1. **[Google Chrome](https://www.google.com/intl/en-CA/chrome/browser/)** - Choisissez un navigateur moderne qui supporte bien les standards du web et qui possède un bon outil de développement. Pour que Chrome soit votre navigateur par défaut suivez [ces instructions](https://support.google.com/chrome/answer/95417?hl=en). Visitez [browsehappy.com](http://browsehappy.com) pour plus d'infos sur les navigateurs modernes.
 
 1. Le goût de l'aventure!!!
-    
+
 **Bonus:** Sublime est génial pour plusieurs choses dont celle de pouvoir y ajouter des fonctionnalités avec des *plugins* (plugiciel, en (trop) bon français).
  [C'est par ici](https://github.com/infn8/LLC-Intro-To-jQuery/blob/master/sublime-text-setup.md) pour apprendre comment ajouter de chouettes fonctionnalités à votre éditeur de code.
         </section>
@@ -95,11 +108,11 @@ Vous aurez besoin :
             <p>Le <strong>JavaScript</strong> sert à manipuler les pages web écrites en HTML et fonctionne aussi avec le CSS.</p>
 
             <p>Le <strong>HTML (Hypertext Markup Language)</strong> est utilisé pour définir le contenu d'un site.</p>
-            
+
             <div class="example">
             <p>Je suis un paragraphe.</p>
             </div>
-            
+
             <p>Le<strong>CSS (Cascading Style Sheets)</strong> est utilisé pour créer l'apparence d'un site.</p>
 
             <div class="example" style="color:green;font-weight:bold;">
@@ -128,10 +141,10 @@ Le HTML (HyperText Markup Language) est le **contenu** de votre document/page we
 
 ```xml
 &lt;ul>
-    &lt;li>Item de liste&lt;/li> 
-    &lt;li>Item de liste&lt;/li> 
     &lt;li>Item de liste&lt;/li>
-&lt;/ul> 
+    &lt;li>Item de liste&lt;/li>
+    &lt;li>Item de liste&lt;/li>
+&lt;/ul>
 ```
 
 ####Images
@@ -147,16 +160,16 @@ Le HTML (HyperText Markup Language) est le **contenu** de votre document/page we
             <p>Paragraphe.</p>
             <p>Un autre paragraphe.</p>
             <ul>
-                <li>Item de liste</li> 
-                <li>Item de liste</li> 
                 <li>Item de liste</li>
-            </ul> 
+                <li>Item de liste</li>
+                <li>Item de liste</li>
+            </ul>
             <p><img src="http://www.fillmurray.com/300/300" alt="Placeholder Image" /></p>
         </section>
         <section class="slide" data-markdown>
-##Rappel sur le CSS 
+##Rappel sur le CSS
 
-Le CSS (Cascading Style Sheets) définit le *style* soit l'apparence et l'expérience que nous aurons avec notre document HTML. Les **Sélecteurs** sont utilisés pour déterminer sur quels **éléments HTML** le style sera appliqué. Ce style sera exprimé par des règles appelées **déclarations** qui seront composées d'une paire `propriété: valeur` entre accolades `{}`. 
+Le CSS (Cascading Style Sheets) définit le *style* soit l'apparence et l'expérience que nous aurons avec notre document HTML. Les **Sélecteurs** sont utilisés pour déterminer sur quels **éléments HTML** le style sera appliqué. Ce style sera exprimé par des règles appelées **déclarations** qui seront composées d'une paire `propriété: valeur` entre accolades `{}`.
 
 
 ```css
@@ -167,10 +180,10 @@ selecteur {
 Une **Propriété** détermine le *type* de style appliqué à un élément (ex: couleur). Les **Valeurs** sont spécifiques à la propriété. Les déclarations doivent se terminer par un point-virgule (`;`) pour indiquer que l'instruction est complète.
 
 ![](framework/img/workshop/css.png)
-        </section>        
+        </section>
         <section class="slide">
             <h2>Les sélecteurs CSS: balises HTML, class & id</h2>
-            
+
             <p>Jetons un coup d'oeil aux différentes façons de sélectionner un élément. Pour sélectionner un tag HTML, il faut tout simplement utiliser le nom du tag HTML sans les chevrons.</p>
 
 <pre class="xml"><code>&lt;div>Sélectionner les éléments div.&lt;/div></code></pre>
@@ -180,7 +193,7 @@ Une **Propriété** détermine le *type* de style appliqué à un élément (ex:
             <div class="example" id="#element">
                 <div>Sélectionner tous les éléments div</div>
             </div>
-            
+
             <p>Pour les classes, l'attribut doit être ajouté au code HTML associé et précédé d'un point dans le CSS.</p>
             <pre class="xml"><code>&lt;div class="special">Sélectionner UN des éléments dans cette classe.&lt;/div></code></pre>
             <textarea class="snippet" data-subject="#class">.special {
@@ -189,7 +202,7 @@ Une **Propriété** détermine le *type* de style appliqué à un élément (ex:
             <div class="example" id="#class">
                 <div class="special">Sélectionner UN des éléments dans cette classe.</div>
             </div>
-            
+
             <p>Pour un id, l'attribut est aussi ajouté au code HTML, mais est précédé par un dièse. Notez que les ids ne peuvent être utilisés qu'<strong>une seule fois</strong> par page.</p>
             <pre class="xml"><code>&lt;div id="special">Sélectionner UN des éléments dans cet id.&lt;/div></code></pre>
             <textarea class="snippet" data-subject="#id">#special {
@@ -214,7 +227,7 @@ JavaScript contrôle le **comportement** de votre document. Cela vous permet de 
     sayHello();
 
 La structure et la syntaxe de JavaScript est plus complexe que HTML et CSS puisque HTML et CSS ne sont pas des langages de programmation à part entière. Ils n'ont pas de **variables**, de **fonctions**, d'**objets** ou encore de **structures de contrôle** comme des déclarations **if** ou des **boucles**, qui sont les principaux blocs de la programmation.
- 
+
 JavaScript possède *tout* cela.
         </section>
         <section class="slide">
@@ -262,14 +275,14 @@ La console est un outil interactif, construit dans le navigateur. Nous pouvons l
         <section class="slide" data-markdown>
 ## Mini-exercice
 
-Expérimentons en tapant quelques données dans la console. Retournez dans **console.html** et ouvrez la console. Après le symbole `>`, écrivez votre nombre préféré et pesez sur la touche de retour/entrée. 
+Expérimentons en tapant quelques données dans la console. Retournez dans **console.html** et ouvrez la console. Après le symbole `>`, écrivez votre nombre préféré et pesez sur la touche de retour/entrée.
 
 Vous devriez voir quelque chose comme ça:
 
 ![console number](framework/img/workshop/console-number.gif)
 
-Le symbole ```>``` est utilisé par la console pour représenter un espace pour vos données.     
-Le symbole ```&lt;``` est utilisé par la console pour montrer la **valeur retournée** de vos données.  
+Le symbole ```>``` est utilisé par la console pour représenter un espace pour vos données.
+Le symbole ```&lt;``` est utilisé par la console pour montrer la **valeur retournée** de vos données.
 
 Vous pouvez aussi entrer du texte, MAIS faites attention ! Quand vous utilisez du text, soyez sûres de le mettre entre guillemets (il y aura plus d'explication là-dessus bientôt).
 
@@ -287,7 +300,7 @@ La commande que vous mettez dans la console est *évaluée* et une valeur vous e
         <section class="slide" data-markdown>
 ## Qu'*est* ce qu'une variable?
 
-Une variable est une information de mémoire localisée qui contient quelques informations connues ou inconnues. 
+Une variable est une information de mémoire localisée qui contient quelques informations connues ou inconnues.
 
 **En *français*, s'il vous plaît.**
 
@@ -302,11 +315,11 @@ Examinons l'exemple ci-dessous.
 /*  |       |            |
    mot-clé  |           valeur donnée à la variable
             |
-           nom de variable créé par vous         
+           nom de variable créé par vous
 */
 ```
 
-Nous prenons la variable ```Bonjour à tous!``` et nous lui donnons le nom ```maVariable```. 
+Nous prenons la variable ```Bonjour à tous!``` et nous lui donnons le nom ```maVariable```.
 
 Nous référons à ceci comme ayant *assigné* une valeur à une *variable*. Évaluer tout ce qui est à la droite du signe égal et ensuite assigner la valeur à la variable à la gauche.
 
@@ -314,20 +327,20 @@ Nous référons à ceci comme ayant *assigné* une valeur à une *variable*. Év
         <section class="slide" data-markdown>
 ##Nommer une variable
 
-Les variables ne peuvent contenir d'espaces, alors une convention appelée *camel case* est généralement utilisée. Chaque nouveau mot commence avec une majuscule et le résultat ressemble à des `bossesDeChameau`. 
+Les variables ne peuvent contenir d'espaces, alors une convention appelée *camel case* est généralement utilisée. Chaque nouveau mot commence avec une majuscule et le résultat ressemble à des `bossesDeChameau`.
 
 JavaScript est sensible à la casse (majuscule et minuscules sont traitées différemment) alors les noms de variables sont aussi sensibles à la casse.
 
 Utilisez un nom descriptif pour rendre plus facile à reconnaître quel genre de valeur la variable va contenir.
 
-`var prenom;` ← Il est clair qu'un prénom se trouve ici.   
-`var pn;`        ← Pas aussi clair que prénom.   
+`var prenom;` ← Il est clair qu'un prénom se trouve ici.
+`var pn;`        ← Pas aussi clair que prénom.
 `var x; `        ← Pas clair du tout.
         </section>
         <section class="slide" data-markdown>
 ## Types de variables : Chaînes
 
-Quand vous décidez de mettre beaucoup de texte, commes des mots ou des phrases, le type de variable est une chaîne de valeur et doit être contenu dans des guillemets. 
+Quand vous décidez de mettre beaucoup de texte, commes des mots ou des phrases, le type de variable est une chaîne de valeur et doit être contenu dans des guillemets.
 
 ```javascript
 var maVariable = "Hello World";
@@ -349,8 +362,8 @@ Le Javascript ci-haut **enchaîne** les trois éléments séparés ensemble :
 
 Alors le résultat de cette variable `phraseComplete` est:
 
-var phraseComplete = premier + " " + deuxieme;  
-= "Hello" + " " + "World"  
+var phraseComplete = premier + " " + deuxieme;
+= "Hello" + " " + "World"
 = "Hello World"
 
         </section>
@@ -393,11 +406,11 @@ JavaScript analyse les enchaînements de lignes comme des valeurs qui sont attac
 
 ```javascript <!-- Ne fonctionne qu'en anglais ;) -->
 var fonctionnelle = "This string value's the bomb!!!";
-var non fonctionnelle = 'This string value's the bomb!!!'; 
+var non fonctionnelle = 'This string value's the bomb!!!';
 ```
 ```javascript
 /*          ^                 ^
-            |_________________| 
+            |_________________|
             |
             Dans cet exemple, Javascript pense que la ligne finit à la deuxième apostrophe.
             Javascript s'attend à ce que la commande finisse avec un point-virgule (;)
@@ -406,7 +419,7 @@ var non fonctionnelle = 'This string value's the bomb!!!';
 ```
 ```
 var aussifonctionelle = "Then I said: 'That string value was the bomb!!!' ";
-var aussinonfonctionnelle = "Then I said: "That string value was the bomb!!!" ";                                   
+var aussinonfonctionnelle = "Then I said: "That string value was the bomb!!!" ";
 ```
 Essayez de copier chacune des lignes et de les mettre dans votre console pour voir les erreurs.
         </section>
@@ -418,8 +431,8 @@ Pour essayer de mieux comprendre les situations rencontrées dans la dernière d
 ```javascript
 var totallyWorks = "Then I said, \"No way you can do that!!!\" ";
 /*                 ^                                           ^
-                   |                                           | 
-                   |___________________________________________| 
+                   |                                           |
+                   |___________________________________________|
                    |
                    JavaScript reconnaît maintenant la ligne qui commence et finit avec un même symbole.
                    La variable 'totallyWorks' a la ligne de valeur assignée ci-dessous:
@@ -457,13 +470,13 @@ Ces calculs fonctionnent de la même façon que ce soit des valeurs de nombres, 
         </section>
 
         <section class="slide" data-markdown>
-            ## Exercice 
+            ## Exercice
 
-            Pratiquons en utilisant des nombres & des opérateurs arithmétiques.   
+            Pratiquons en utilisant des nombres & des opérateurs arithmétiques.
             `+` pour 'addition, `-` pour la soustraction, `*` pour la multiplication et `/` pour la division.
 
             ![doing math in the console](framework/img/workshop/console-math.gif)
-            
+
             Maintenant, essayez d'utiliser ces opérateurs avec des variables. Créons un programme qui peut calculer l'âge d'une personne. Créez deux variables, une pour  `currentYear` et l'autre pour `birthYear` et soustrayez ces valeurs.
 
             ![doing math with variables in the console](framework/img/workshop/console-math-variables.gif)
@@ -474,14 +487,14 @@ Ces calculs fonctionnent de la même façon que ce soit des valeurs de nombres, 
 
 Créez un programme qui utilise les concepts que nous avons couverts jusqu'à maintenant: les variables & les opérateurs arithmétiques.
 
-Combien de secondes y a-t-il par jour? 
+Combien de secondes y a-t-il par jour?
 
-* Créez la variable pour `secondsPerMinute`, `minutesPerHour` et `hoursPerDay`.  
+* Créez la variable pour `secondsPerMinute`, `minutesPerHour` et `hoursPerDay`.
 * Utilisez ces valeurs pour calculer `secondsPerDay`.
 
 Soyez à l'aise d'utiliser vos propres noms de variables ou abréviations, Soyez juste sûres d'utiliser les meilleures pratiques pour nommer des variables.
 
-**Défi additionnel!**   
+**Défi additionnel!**
 Utilisez des enchaînements pour obtenir comme résultat final: "There are x seconds per day."
 
 (Allez à la prochaine diapositive pour voir la solution.)
@@ -506,7 +519,7 @@ var sentence = "There are " + secondsPerDay + " seconds per day.";
 sentence;
 ```
         </section>
-        
+
         <section class="slide" data-markdown>
 ## Types de variables: Booleans
 
@@ -528,17 +541,17 @@ Les variables peuvent aussi retenir une *liste* de valeurs (les valeurs étant e
 var myFavoriteThings = [ "Raindrops On Roses", "Whiskers On Kittens" ];
 ```
 
-Vous pouvez aussi écrire chacune des valeurs sur sa propre ligne pour la lecture. JavaScript ignorera le saut de ligne. 
+Vous pouvez aussi écrire chacune des valeurs sur sa propre ligne pour la lecture. JavaScript ignorera le saut de ligne.
 ```javascript
 // Déclarer l'array et les valeurs assignées.
-var myFavoriteThings = [ 
-    "Raindrops On Roses", 
-    "Whiskers On Kittens" 
+var myFavoriteThings = [
+    "Raindrops On Roses",
+    "Whiskers On Kittens"
 ];
-``` 
-        </section> 
+```
+        </section>
         <section class="slide" data-markdown>
-##Valeurs d'array 
+##Valeurs d'array
 
 Pour accéder à la valeur d'une variable, utilisez le nom de la variable. Pour les **arrays**, les valeurs sont acessibles par leur nom d'*array* et leur **index numérique**, aussi contenu dans des crochets, **commencent à ```0```**.  Pour obtenir la valeur du premier item dans un *array*, la syntaxe sera comme suit:
 
@@ -553,7 +566,7 @@ Imaginez les *arrays* comme un carton d'oeufs. Tous les oeufs sont dans un seul 
 Un moyen alternatif de déclarer et d'assigner des valeurs à un *array* est d'utiliser les crochets avec un index numérique. Ceci devrait donner le même résultat que ci-haut.
 
 ```javascript
-// Déclarer un array vide. 
+// Déclarer un array vide.
 var myFavoriteThings = [];
 // Assigner des valeurs à un array.
 myFavoriteThings[0] = "Raindrops On Roses";
@@ -623,7 +636,7 @@ var variableName = { propertyName : propertyValue, anotherPropertyName : another
                    |     |        |      |       └ Une virgule (,) sépare les propriétés
                    |     |        |      └ La valeur de la propriété suit les deux points
                    |     |        └ Deux points (:) sont utilisés pour séparer le nom d'une valeur
-                   |     └  Le nom de propriété doit commencer avec une lettre et ne contient pas d'espace 
+                   |     └  Le nom de propriété doit commencer avec une lettre et ne contient pas d'espace
                    └ Le crochet commence l'objet.
 */
 ```
@@ -670,7 +683,7 @@ var vonTrappFamily = {
         <section class="slide" data-markdown>
 ## Types de Variable
 
-Comme vous avez vu, il y a *plusieurs* différents types de variable dans JavaScript et plusieurs règles sur comment les écrire. 
+Comme vous avez vu, il y a *plusieurs* différents types de variable dans JavaScript et plusieurs règles sur comment les écrire.
 
 Ceci prendra de la pratique pour s'y habituer, mais il est important de comprendre les variables qui sont utilisées pour retenir les valeurs. Les valeurs elle-mêmes ont différents types.
         </section>
@@ -685,14 +698,14 @@ Cela dépend. Que voulez-vous que votre **logiciel** fasse? Regardons [cet exemp
 
 * Soyez attentives aux liens sur le menu principal d'une page.
 * À chaque fois que quelqu'un passe sa souris sur un de ces items, une ligne se déplace pour surligner l'item sur lequel nous sommes passées.
-* Quand la souris quitte l'item, la ligne se replace à l'endroit où elle était. 
+* Quand la souris quitte l'item, la ligne se replace à l'endroit où elle était.
 
 Cet exemple illustre une courte série de commandes. Quand une série de commande est répétitive, plutôt que d'écrire la même ligne de code plusieurs fois dans notre logiciel, nous pouvons créer une `fonction`.
         </section>
         <section class="slide" data-markdown>
 ## Fonctions
 
-Si une `variable` est un nom pour une valeur, alors une `fonction` est un nom pour un **set** de commandes ou d'instructions. Quand nous invoquons une variable, elle retourne une valeur.  Quand nous invoquons une fonction, elle exécute toutes les commandes contenues à l'intérieur d'elle, aidant le code ainsi à "faire des actions"  
+Si une `variable` est un nom pour une valeur, alors une `fonction` est un nom pour un **set** de commandes ou d'instructions. Quand nous invoquons une variable, elle retourne une valeur.  Quand nous invoquons une fonction, elle exécute toutes les commandes contenues à l'intérieur d'elle, aidant le code ainsi à "faire des actions"
 
 Analysons les deux fonctions suivantes, `alert()` and `prompt()`.  Celle-ci sont construites dans JavaScript dès le début !
 
@@ -722,14 +735,14 @@ Peu importe la valeur qu'il y a dans les parenthèses, celle-ci sera passée dan
 
 Vous povuez créer vos propres fonctions qui peuvent contenir n'importe quelle instructions dont vous nécessitez, incluant d'autres fonctions. Utilisez le mot-clé `fonction` pour créer une nouvelle fonction.
 
-Jetons un coup d'oeil à cet exemple: 
+Jetons un coup d'oeil à cet exemple:
 
 ```javascript
 function sayAnything(){
     alert("Hello World");
 }
 ```
-Dans l'exemple ci-haut, une nouvelle fonction`sayHello` est créé, mais comme les variables, rien ne se passera tant et aussi longtemps que la fonction n'est pas **appelée**.  
+Dans l'exemple ci-haut, une nouvelle fonction`sayHello` est créé, mais comme les variables, rien ne se passera tant et aussi longtemps que la fonction n'est pas **appelée**.
 
 Nous avons déjà pratiqué le fait d'appeler une fonction. Vous vous rappelez de  `alert();` et `prompt();`?  Appelez simplement cette fonction en utilisant le nom de la fonction plus les parenthèses`()`. Ajoutons la déclaration de fonction ci-dessus dans la console et exécutons la en l'appelant.
 
@@ -778,17 +791,17 @@ Essayons le tout dans la console. Premièrement, ajoutez la fonction et appelez 
         </section>
         <section class="slide" data-markdown>
 ##Paramètres multiples
-                    
+
 JavaScript permet plusieurs paramètres. Quand vous appelez la fonction, ajoutez les valeurs dans le même ordre que les paramètres déclarés dans la fonction.
 
 ```javascript
 function maPropreFonction(parametre1, parametre2, parametreN) {
 /*             |              |           |          |
                |              |           |          └ Vous pouvez avoir autant de paramètres que vous voulez.
-               |              |           └ Le second paramètre de la fonction.            
-               |              └ Le premier paramètre de la fonction.          
-               └ Le nom de votre fonction.                          
-*/  
+               |              |           └ Le second paramètre de la fonction.
+               |              └ Le premier paramètre de la fonction.
+               └ Le nom de votre fonction.
+*/
 }
 
 // Appelez la fonction avec des arguments dans le même ordre.
@@ -823,8 +836,8 @@ var fruits = ["pommes", "oranges", "poires"];
 // accéder à la propriété de 'longueur' d'un objet array pour savoir combien il y a de fruits inscrits.
 var typesDeFruits = fruits.length;
 
-// Mettez dans la console le nombre d'items et enchaîner les dans une phrase. 
-console.log("Il y a " + typesDeFruits + " types de fruits."); 
+// Mettez dans la console le nombre d'items et enchaîner les dans une phrase.
+console.log("Il y a " + typesDeFruits + " types de fruits.");
 ```
 
 Essayez ceci dans la console.
@@ -834,7 +847,7 @@ Essayez ceci dans la console.
             <h2>Fonctions &amp; jQuery</h2>
             <p>Une fonction est un des plus puissants outils dans JavaScript et l'une des fonctions les puis puissantes que vous aurez à utiliser est celle-ci:</p>
             <pre class="delayed"><code>jQuery();</code></pre>
-            
+
             <div class="delayed">
                 <p>Rappelez-vous, jQuery est une <strong>librairie JavaScript</strong>. C'est une librairie de fonctions/méthodes utilisées pour simplifier votre programme. Vous pouvez la télécharger et l'utiliser dans vos projets. </p>
             </div>
@@ -853,14 +866,14 @@ Essayez ceci dans la console.
 
         <section class="slide" data-markdown>
 ## Utilisation de jQuery
-                    
+
 Vous savez comment utiliser jQuery parce que vous savez comment sélectionner des **éléments HTML** avec des **sélecteurs CSS**.
 
 ```css
 .menu-item { color: blue; }
 /*   |        |      |
      |        |      └ La valeur de la propriété CSS.
-     |        └ La propriété CSS. 
+     |        └ La propriété CSS.
      └ L'élément HTML avec une classe de 'menu-item' est sélectionné.
 */
 ```
@@ -871,20 +884,20 @@ Le même code dans jQuery est fait ainsi:
 jQuery('.menu-item').css('color', 'blue');
 /* ^         ^        ^     ^        ^
    |         |        |     |        └ Le second paramètre donne la valeur CSS.
-   |         |        |     |   
+   |         |        |     |
    |         |        |     └ Le premier paramètre donne la propriété CSS.
-   |         |        |     
-   |         |        └ La méthode jQuery 'css' est appelée et changera   
+   |         |        |
+   |         |        └ La méthode jQuery 'css' est appelée et changera
    |         |          le CSS de l'élément sélectionné dans l'étape précédente.
    |         |
    |         └ L'argument envoyé à la fonction jQuery est un enchaînement de valeurs qui
    |           prend la forme d'un sélecteur CSS.
-   | 
+   |
    └ La fonction jQuery. Ceci est super important car il fait fonctionner le reste.
 */
 ```
         </section>
-        <section class="slide" data-markdown> 
+        <section class="slide" data-markdown>
 ## Raccourci: Le signe de dollard.
 
 ```javascript
@@ -905,7 +918,7 @@ C'est ce que nous ferons à partir de maintenant.
 ## Qu'est ce que jQuery peut faire?
 
 * Animer des items.
-* Performer des interactions avec vos utilisateurs 
+* Performer des interactions avec vos utilisateurs
 * Créer de riches expériences utilisateurs avec des composantes telles que:
     * Tabs
     * Accordéons
@@ -934,7 +947,7 @@ La librairie jQuery contient plusieurs fonctions et méthodes déjà incluses. V
                 <p>Get the learners to change a couple values so they can see how things change but just give a high level overview about the concepts. They will be discussed in more detail in the next few slides.</p>
             </div>
         </section>
-        
+
         <section class="slide">
             <h2>Exemples jQuery</h2>
 
@@ -948,12 +961,12 @@ La librairie jQuery contient plusieurs fonctions et méthodes déjà incluses. V
             </p>
             <p> Le jQuery est où toute la magie opère.</p>
         </section>
-    
+
         <section class="slide">
             <h2>Exemples jQuery</h2>
 
             <p>Vous pouvez même <em>accroître</em> les possibililés avec des <strong>plugins</strong> comme jQuery UI utilisé ci-dessous. Vous pouvez déplacer et ré-organiser les items en utilisant le plugin d'organisation («jQuery UI sortable plugin»).</p>
-            
+
             <p data-height="268" data-theme-id="0" data-slug-hash="fAmbJ" data-default-tab="result" data-user="learningcode" class='codepen'>See the Pen <a href='http://codepen.io/learningcode/pen/fAmbJ/'>jQuery UI Draggable Sortable Example</a> by Ladies Learning Code (<a href='http://codepen.io/learningcode'>@learningcode</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
             <script async src="http://codepen.io/assets/embed/ei.js"></script>
 
@@ -962,7 +975,7 @@ La librairie jQuery contient plusieurs fonctions et méthodes déjà incluses. V
 
             <img src="framework/img/workshop/codepen.png">
         </section>
-        
+
         <section class="slide title" data-markdown>
             #Écrivons du jQuery!
         </section>
@@ -971,7 +984,7 @@ La librairie jQuery contient plusieurs fonctions et méthodes déjà incluses. V
 ##Préparer son environnement de travail
 
 Pour le reste de la journée, vous travaillerez avec les fichiers inclus dans le dossier <strong>projet</strong>. Prenons un instant pour préparer notre environnement de travail.
-Dans le dossier que vous avez téléchargé aujourd'hui (**llc-intro-a-jquery-master**), il y a plusieurs dossiers et fichiers. 
+Dans le dossier que vous avez téléchargé aujourd'hui (**llc-intro-a-jquery-master**), il y a plusieurs dossiers et fichiers.
 
     llc-intro-a-jquery-master
         |-- framework // Contient le nécessaire au diapos de cette présentation. Ne pas éditer!
@@ -996,25 +1009,25 @@ Ouvrons notre nos fichiers de travail dans un navigateur et un éditeur de texte
 * Faites clique-droit dans Sublime et sélectionnez **Open in Browser**. Cette action ouvrira la page HTML dans votre navigateur.
     * Si Chrome n'est pas votre navigateur par défaut, allez dans Window/Finder et naviguez dans le dossier **projet**, clique-droit sur **index.html** et choisissez **Open With > Chrome**
 
-Vous devriez voir ceci dans Sublime Text: 
+Vous devriez voir ceci dans Sublime Text:
 
 ![open project](framework/img/workshop/open-project.png)
         </section>
-        <section class="slide"> 
+        <section class="slide">
             <h2>Utiliser jQuery</h2>
             <p>Pour utiliser jQUery dans votre page HTML, vous devrez créer un lien vers le fichier jQuery. Il y a 2 façons possible.</p>
 
             <p>1. <strong>Inclure un fichier jQuery avec vos fichiers de projet:</strong></p>
 
             <ul>
-                <li><a href="http://jquery.com/download/">Téléchargez la dernière version de jQuery</a> et utilisez la dernière, la version compressée.</li> 
+                <li><a href="http://jquery.com/download/">Téléchargez la dernière version de jQuery</a> et utilisez la dernière, la version compressée.</li>
                 <li>Sauvegardez-la avec vos fichers de projet. Il est recommandé de créer un dossier <strong>js</strong>  pour regrouper les fichiers JavaScript (comme il a un dossier pour les images et pour les fichiers CSS.)</li>
                 <li>Reliez-la à votre fichier HTML en utilisant une balise script. La source (<code>src</code>) devrait pointer vers le lieu où est situé votre fichier dans la structude de votre dossier de projet.<br> Aujourd'hui vous n'aurez pas à le faire puisque nous avons déjà mit le fichier jQuery dans votre dossier de projet pour vous.</li>
             </ul>
 
             <pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js">&lt;/script></code></pre>
 
-            <p><strong>Important</strong>:  
+            <p><strong>Important</strong>:
                 Contrairement au CSS, qui doit toujours être inclus entre les balise <code>&lt;head&gt;</code>, le JavaScript peut être inclus n'importe où dans la page: dans le <code>&lt;head&gt;</code> ou dans le <code>&lt;body&gt;</code>. Souvent, on l'inclus juste avant la fermeture du <code>&lt;/body&gt;</code> pour permettre au contenu de la page de charger en premier.</p>
 
             <p>2. <strong>Utiliser un CDN:</strong></p>
@@ -1027,9 +1040,9 @@ Vous devriez voir ceci dans Sublime Text:
 
             <div class="presenter-notes">
                 <p>The examples in jQuery's Learning Center uses the script at the bottom so use it this way to be consistent.</p>
-            </div> 
+            </div>
         </section>
-    
+
         <section class="slide">
             <h2>Que venons-nous de faire ?</h2>
 
@@ -1047,7 +1060,7 @@ Vous devriez voir ceci dans Sublime Text:
 
             <p>Génail! Ouvrons <strong>index.html</strong> dans Chrome ou rafraîchissez la page que vous avez déjà ouverte et voyez ce que jQuery fait quand vous l'incluez dans un fichier HTML.</p>
         </section>
-        <section class="slide" data-markdown> 
+        <section class="slide" data-markdown>
 ## Remarquez-vous des différences à votre projet?
 ### Non?
 
@@ -1057,8 +1070,8 @@ Maintenant que jQuery est dans notre page, nous pouvons utiliser la fonction `$(
 
 On utilise souvent jQuery pour cibler un élément sur la page et ajouter ou changer son comportement.
         </section>
-        <section class="slide" data-markdown> 
-## Comment sélectionner un élément avec $(); 
+        <section class="slide" data-markdown>
+## Comment sélectionner un élément avec $();
 
 La fonction ```$();``` ne prend qu'un seul paramètre: une <em>string</em> qui contient un sélecteur CSS ou un élément HTML indiquant quel item(s) est sélectionné sur la page.
 
@@ -1076,7 +1089,7 @@ L'élément HTML qui correspond au sélecteur sont ajoutés dans ce qu'on appell
 
 Quand vous roulez une **méthode** jQuery seuls les items du <em>**wrapped set**</em> seront modifiés ou affectés.</section>
 
-        <section class="slide"> 
+        <section class="slide">
             <h2>Les Méthodes jQuery</h2>
             <p> La librairie jQuery vient avec de noooooombreuses méthodes. Nous ne pourrons toutes les couvrir aujourd'hui, mais pour voir ce qui est disponible et comment les utiliser allez sur <a href="http://api.jquery.com">api.jquery.com</a>.</p>
             <p>Nous discuterons de quelques méthodes ici et là une fois que nous aurons débuté notre rotateur d'image.</p>
@@ -1092,13 +1105,13 @@ Quand vous roulez une **méthode** jQuery seuls les items du <em>**wrapped set**
                 <li>La méthode <code>.addClass();</code> vous permet d'ajouter une classe CSS aux éléments du <strong>wrapped set</strong>.</li>
             </ul>
         </section>
-       
-        <section class="slide" data-markdown> 
+
+        <section class="slide" data-markdown>
 ## <em>Timing</em>
 
 Le navigateur télécharge toutes les pages web de haut en bas et quand elle voit du javaScript, il l'exécute. S'il vous arrive de voir ceci:
 
-```javascript 
+```javascript
 $("p.highlight").css("background-color", "yellow");
 ```
 Avant d'ajouter cela:
@@ -1110,7 +1123,7 @@ Avant d'ajouter cela:
 Le code JavaScript sera exécuté AVANT que le navigateur voir la balise paragraphe. jQuery ne sera pas capable de cibler l'élément et ne pourra donc y ajouter la couleur jaune !
         </section>
 
-        <section class="slide"> 
+        <section class="slide">
             <h2>Le Document Ready</h2>
 
             <p><code>$( document ).ready()</code> est un <strong>événement</strong>.  C'est un <em>moment précis</em> quand le navigateur a téléchargé une majeure partie de la page web: c'est-à-dire assez pour voir toutes les balises et les avoir associés avec celles déclarées dans votre code jQuery.</p>
@@ -1123,7 +1136,7 @@ Le code JavaScript sera exécuté AVANT que le navigateur voir la balise paragra
 
             <p><em>Document Ready</em> est un concept un peu complexe qui possède une syntaxe plus difficile à mémoriser. Il vous faut savoir seulement qu'il est <strong>nécessaire</strong> pour faire fonctionner du code jQuery. Apprenez-en davantage <a href="http://learn.jquery.com/using-jquery-core/document-ready/">ici</a>.</p>
         </section>
-        
+
         <section class="slide" data-markdown>
 ##Commentaires!
 
@@ -1144,12 +1157,12 @@ quand vous avez beaucoup à dire. */
 ```
 Les commentaires multi-lignes sont géniaux pour «cacher» des blocs de code si vous voulez essayer un truc sans effacer votre ancien code.
         </section>
-        <section class="slide"> 
+        <section class="slide">
             <h2>Faison enfin quelque chose!!!</h2>
             <p>Retournons à Sublime et à <strong>index.html</strong>. Sous la balise jQuery, ajoutez une autre balise script pour y ajouter - enfin - votre propre code.</p>
 <pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
-    
+
 &lt;&#47;&#115;cript&gt;
 </code></pre>
             <p>Ajouter le <code>$( document ).ready()</code> comme ceci:</p>
@@ -1160,7 +1173,7 @@ Les commentaires multi-lignes sont géniaux pour «cacher» des blocs de code si
     });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
-            
+
             <p>Dans la section des favoris, voici 4 images adorables d'un chien.</p>
             <img src="framework/img/workshop/Screen-Shot-1.png.jpg" alt="">
             <p>Ayons du fun avec!</p>
@@ -1258,7 +1271,7 @@ Testons le click event et assurons-nous que nous avons sélectionner le bon él�
 Tester le click event nous permettra de savoir si cette étape fonctionne avant de passer à la suivante.
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     console.log("Ça marche!");
 });
 ```
@@ -1275,7 +1288,7 @@ Maintenant que le *click event* fonctionne, vous pouvez effacer votre test `cons
 Puis ajoutons la méthode `.hide()`.
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     //console.log("It works!");
     $(this).hide();
 });
@@ -1293,7 +1306,7 @@ Ajoutons-le à notre projet et **inspectons l'élément** pour voir comment jQue
 La **méthode** `hide()` accepte aussi un **paramètre** de durée: combien de temps ça devrait prendre avant que l'effet se produise. Ajoutez un nombre en milisecondes entre les parenthèses.
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     $(this).hide(1000);
 });
 ```
@@ -1309,14 +1322,14 @@ Ajoutez-le à votre projet pour le voir en action. Essayez d'expérimenter avec 
 Et si nous voulions simplement cacher un truc rapidement, puis le remontrer tout de suite. On pourrait **chaîner** nos méthodes.
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     $(this).hide(1000).show('fast');
 });
 ```
 Les méthodes jQuery sont chaînées par un point (.)  entre elles. L'exemple ci-dessous fonctionne parfaitement même s'il est ridiculement simple. Il faut bien avoir du plaisir à expérimenter !
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     $(this).hide(1000).show('fast').fadeOut('slow').fadeIn(5000).slideUp(800).slideDown(10000);
 });
 ```
@@ -1333,30 +1346,30 @@ Pourquoi avons-nous utilisé `$(this)` comme sélecteur dans l'exercice précéd
 jQuery nous aide en nous donnant une super variable appelée ```this```. Lorsque nous voulons sélectionner une image nous voulons sélectionner **seulement cette image précise** lorsqu'elle sera cliquée. L'exemple ci-dessous identifierait toutes les images ciblées et les cacherait en réaction au clic.
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     $(".fav-img").hide(1000);
 });
 ```
 
-`$(".fav-img").click()` Va rechercher *n'importe quelle* image cliquée.   
+`$(".fav-img").click()` Va rechercher *n'importe quelle* image cliquée.
 `$(".fav-img").hide(1000);` Va ajouter l'effet *caché* à **tous** les éléments associés.
 
 Le code ci-dessous s'assure que seul l'élément cliqué sera affecté par l'effet qui lui a été appliqué.
 
 ```javascript
-$(".fav-img").click(function(){ 
+$(".fav-img").click(function(){
     $(this).hide(1000);
 });
 ```
 
-`$(".fav-img").click()` Va rechercher *n'importe quelle* image cliquée.   
+`$(".fav-img").click()` Va rechercher *n'importe quelle* image cliquée.
 `$(this).hide(1000);` a ajouter l'effet *caché* en réaction au clic, seulement sur l'élément ciblé. Ainsi, seul l'élément ciblé sera caché.
         </section>
 
         <section class="slide" data-markdown>
 ##Exercice: Un menu actif !
 
-Utilisons maintenant les méthodes jQuery `click()`, `addClass()` et `removeClass()` pour créer une classe `.active` pour styler les différents items du menu lorsqu'ils seront cliqués. Voici les étapes à suivre en jQuery: 
+Utilisons maintenant les méthodes jQuery `click()`, `addClass()` et `removeClass()` pour créer une classe `.active` pour styler les différents items du menu lorsqu'ils seront cliqués. Voici les étapes à suivre en jQuery:
 
 
 1. Sélectionnez les items qui seront cliqués.
@@ -1415,25 +1428,25 @@ Débutons !
                 <p>C'est parce que vous n'avez pas ajouté le style dans le fichier CSS encore. Vous pouvez toujours vérifier s'il a été ajouté au HTML. Si votre console est toujours ouverte, cliquez simplement sur l'onglet “Elements”.</p>
 
                 <p><img src="framework/img/workshop/console-menu-active.gif" alt="" title=""> </p>
-                    
+
                 <p>Maintenant, allez dans <strong>style.css</strong> pour créer un nouveau style CSS pour l'état actif. C'est ce qui changera la couleur (mais vous pouvez ajouter le style qui vous plaît). Puisque la couleur a été ajoutée à <code>.menu a</code>, créez un sélecteur utilisant la nouvelles classe <code>active</code>.</p>
 
 <pre><code>.menu a.active {
     color: #A8258D;
 }
 </code></pre>
-                <p>Maintenant, testez votre page à nouveau.</p> 
-            </div>     
+                <p>Maintenant, testez votre page à nouveau.</p>
+            </div>
         </section>
 
         <section class="slide" data-markdown>
 ##Exercice: Un menu actif ! - la méthode <code>addClass()</code>
 
-On y arrive. Nous avons été capable d'ajouter une classe à l'item cliqué, mais nous savons que nous devons enlever ladite classe aux item inactifs. Souvenez-vous, JavaScript/jQuery exécute les commandes de haut en bas. Une façon de régler notre problème serait d'enlever la classe **en premier**, **puis** d'ajouter la classe à l'item cliqué. 
+On y arrive. Nous avons été capable d'ajouter une classe à l'item cliqué, mais nous savons que nous devons enlever ladite classe aux item inactifs. Souvenez-vous, JavaScript/jQuery exécute les commandes de haut en bas. Une façon de régler notre problème serait d'enlever la classe **en premier**, **puis** d'ajouter la classe à l'item cliqué.
 
 Dans ce cas, nous n'utiliserons pas le sélecteur `$(this)` puisque nous recherchons n'importe quel élément avec la classe `active` pour la lui enlever. Ce qui signifique que notre `.active` sera notre sélecteur.
-    
-```javascript  
+
+```javascript
 $(".menu a").click(function(){
     //console.log("It works!");
     $(".active").removeClass("active");
@@ -1534,7 +1547,7 @@ Nous utiliserons le plugin FlexSlider aujourd'hui pour ajouter un carousel d'ima
 Le javascript montre la première et cache le reste. Puis, après quelques secondes elle montre la seconde et cache le reste. Il en est ainsi jusqu'à ce que toutes les images ait été montrées et il repart depuis le début.
         </section>
 
-        <section class="slide"> 
+        <section class="slide">
             <h2>Le Flexslider</h2>
 
             <p>Le Flexslider est un rotateur jQuery très performant et bien entretenu. Le comble c'est qu'il est gratuit et facile à utiliser !</p>
@@ -1575,7 +1588,7 @@ $(document).ready(function(){
 &lt;&#47;&#115;cript&gt;
 </code></pre>
             <p>FlexSlider vient aussi avec son propre fichier CSS. Soyez certaines de l'inclure dans la section <code>&lt;head></code> <em>avant</em> style.css.</p>
-   
+
 <pre><code>&lt;head&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
     &lt;link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'&gt;
@@ -1619,7 +1632,7 @@ Vous pouvez mettre ce code où vous le désirez sur votre page. Sauvegardez le f
         </section>
 
         <section class="slide" data-markdown>
-            
+
 ##Ajouter le Flexslider à son projet: Étape 3
 
 **Initialisez** le plugin en ajoutant ce petit bout de code dans votre fonction `$(document).ready()`:
@@ -1629,16 +1642,16 @@ $(document).ready(function(){
     // Add all jQuery code here.
     $('.flexslider').flexslider();
 });
-```  
+```
 Oui, oui c'est ça ! Voyons-le en détail:
 
 ```javascript
    $('.flexslider').flexslider();
 /* |      |          |        └ Les parenthèse indiquent l'appel de la fonction.
-   |      |          └ La méthode Flexslider. 
-   |      └ Le sélecteur ajoutera tous les items avec la class 'flexslider' dans 
+   |      |          └ La méthode Flexslider.
+   |      └ Le sélecteur ajoutera tous les items avec la class 'flexslider' dans
             l'ensemble jQuery.
-   └ La fonction jQuery.          
+   └ La fonction jQuery.
 */
 ```
 Sauvegardez et rafraîchissez la page dans votre navigateur.
@@ -1680,7 +1693,7 @@ Puis ajouter le css dans **styles.css** pour changer la taille dudit conteneur.
         margin: 0 auto; /* aligne au centre le slider */
     }
 
-Jetez un oeil à votre page. Beaucoup mieux, n'est-ce pas ? 
+Jetez un oeil à votre page. Beaucoup mieux, n'est-ce pas ?
 
 **Pro Tip:**
 Choisissez la largeur de vos images selon VOS besoins, c'est-à-dire à la largeur maximale souhaitée. Elles vont automatiquement se réduires avec la page, mais si vous les prenez très grosses, elles alourdiront votre site avec leur poids élevé.
@@ -1725,7 +1738,7 @@ Votre point de départ est **flexslider.css**. Le `../` signifie « Sors et remo
 Une autre option serait de déplacer le dossier **fonts** à l'intérieur du fichier **css**. La source du fichier css doit seulement refléter la structure du répertoire.
 
         </section>
-        
+
         <section class="slide" data-markdown>
 ## Personnalisation
 
@@ -1746,24 +1759,24 @@ Voyons comment implémenter ces 2 options.
 Allez à cette ligne de code dans votre document:
 ```javascript
 $('.flexslider').flexslider();
-```  
+```
 Et changez-le pour l'exemple ci-dessous. Est-ce que cette syntaze vous est familière ? [Les objets](#slide28)?
 
 ```javascript
 $('.flexslider').flexslider({ animation : "slide" });
-```  
+```
 Rafraîchissez votre page. Remarquez comment flexslider anime maintenant les slides à glisser de gauche à droite plutôt qu'à les dissoudre entre elles au passage. Maintenant, changez-le à nouveau pour ceci:
 ```javascript
 $('.flexslider').flexslider({ animationSpeed : 2000 });
-```  
+```
 Rafraîchissez votre page. Vous remarquez la différence ?
 
 Si vous voulez utiliser plusieurs options, vous n'avez qu'à les séparer par une virgule comme ceci:
 
 ```javascript
-$('.flexslider').flexslider({ 
+$('.flexslider').flexslider({
     animation : "slide",
-    animationSpeed : 2000 
+    animationSpeed : 2000
 });
 ```
         </section>
@@ -1829,11 +1842,11 @@ Voici un chouette tutoriel pour apprendre à mettre ses fichiers en ligne FileZi
 
 Vous vous sentez aventureuse ? Essayez [Hosting Static Sites on Github for Beginners](http://thephuse.com/development/hosting-static-sites-on-github-for-beginners/).
         </section>
-        
+
         <!-- Last slide -->
         <section class="slide last">
             <h2>Merci beaucoup !</h2>
-            
+
             <h2 class="heading-bg">
                 <span>jQuery pour les débutantes</span>
             </h2>
@@ -1855,7 +1868,7 @@ Vous vous sentez aventureuse ? Essayez [Hosting Static Sites on Github for Begin
         <p class="license"><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" src="framework/img/cc-by-nc.svg" /></a> by <a prefix="cc: http://creativecommons.org/ns#" href="http://ladieslearningcode.com" property="cc:attributionName" rel="cc:attributionURL">Ladies Learning Code</a></p>
         <p class="instructions">Use the left <i class="fa fa-arrow-left"></i> and right <i class="fa fa-arrow-right"></i> arrow keys to navigate</p>
     </footer>
-    
+
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="framework/scripts/slideshow.js"></script>
 
@@ -1887,4 +1900,3 @@ Vous vous sentez aventureuse ? Essayez [Hosting Static Sites on Github for Begin
     </script>
 </body>
 </html>
-
