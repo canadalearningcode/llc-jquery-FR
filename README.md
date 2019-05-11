@@ -1,11 +1,12 @@
-#Ladies Learning Code
-##Intro to jQuery
+# Ladies Learning Code
+
+## Intro to jQuery
 
 A full day introductory to jQuery workshop.
 
 ## Liens rapides
 
-Aperçu des diapositives : ladieslearningcode.github.io/llc-intro-to-wordpress-FR/slides_fr.html
+Aperçu des diapositives : http://ladieslearningcode.github.io/llc-jquery-FR
 
 ##Sources
 
