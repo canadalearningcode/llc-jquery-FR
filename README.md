@@ -6,7 +6,7 @@ A full day introductory to jQuery workshop.
 
 ## Liens rapides
 
-Aperçu des diapositives : http://ladieslearningcode.github.io/llc-jquery-FR
+Aperçu des diapositives : http://ladieslearningcode.github.io/llc-jquery-FR/index-fr.html
 
 ##Sources
 
