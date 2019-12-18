@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,6 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Quicksand%7CPacifico%7COpen+Sans:400italic,400,300' rel='stylesheet' type='text/css' data-noprefix>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="framework/css/highlightjs-themes/vs.css" data-noprefix>
+    <link rel="stylesheet" href="framework/css/a11y/plugin.css">
     <link rel="stylesheet" href="framework/css/theme-llc.css" data-noprefix>
     <link rel="shortcut icon" href="framework/img/favicon.ico">
 
@@ -84,7 +85,7 @@
         <section class="slide centered" data-markdown>
             ## Notre projet d'aujourd'hui
 
-            ![Today's project](framework/img/workshop/final-project.gif)
+            ![Le projet d'aujourd'hui; navigation en haut, grande image de bannière et contenu du curseur du carrousel.](framework/img/workshop/final-project.gif)
 
             Suivez ce [lien](project/final/index.html) pour voir le projet en action !
         </section>
@@ -107,23 +108,28 @@ Vous aurez besoin :
 
             <p>Le <strong>JavaScript</strong> sert à manipuler les pages web écrites en HTML et fonctionne aussi avec le CSS.</p>
 
-            <p>Le <strong>HTML (Hypertext Markup Language)</strong> est utilisé pour définir le contenu d'un site.</p>
+            <ul>
+              <li>Le <strong>HTML (Hypertext Markup Language)</strong> est utilisé pour définir le contenu d'un site.
 
-            <div class="example">
-            <p>Je suis un paragraphe.</p>
-            </div>
+                <div class="example">
+                <p>Je suis un paragraphe.</p>
+                </div>
+              </li>
 
-            <p>Le<strong>CSS (Cascading Style Sheets)</strong> est utilisé pour créer l'apparence d'un site.</p>
+              <li>Le<strong>CSS (Cascading Style Sheets)</strong> est utilisé pour créer l'apparence d'un site.
 
-            <div class="example" style="color:green;font-weight:bold;">
-            <p>Je suis un paragraphe avec du <span>style</span>.</p>
-            </div>
+                <div class="example" style="color:green;font-weight:bold;">
+                <p>Je suis un paragraphe avec du <span>style</span>.</p>
+                </div>
+                </li>
 
-            <p>Le <strong>JavaScript</strong> est un langage de <em>programmation</em> c'est-à-dire une façon de coder pour définir les comportements et les fonctionnalités d'un site web.</p>
+              <li>Le <strong>JavaScript</strong> est un langage de <em>programmation</em> c'est-à-dire une façon de coder pour définir les comportements et les fonctionnalités d'un site web.
 
-            <div class="example">
-            <p onclick="alert('clicked!');">Je suis un paragraphe cliquable. Essayez-le !</p>
-            </div>
+                <div class="example">
+                <p onclick="alert('clicked!');">Je suis un paragraphe cliquable. Essayez-le !</p>
+                </div>
+              </li>
+            </ul>
         </section>
         <section class="slide" data-markdown>
 ## Rappel sur le HTML
@@ -132,14 +138,14 @@ Le HTML (HyperText Markup Language) est le **contenu** de votre document/page we
 
 ####Paragraphes
 
-```xml
+```html
 &lt;p>Paragraph.&lt;/p>
 &lt;p>Another paragraph.&lt;/p>
 ```
 
 ####Listes
 
-```xml
+```html
 &lt;ul>
     &lt;li>Item de liste&lt;/li>
     &lt;li>Item de liste&lt;/li>
@@ -149,7 +155,7 @@ Le HTML (HyperText Markup Language) est le **contenu** de votre document/page we
 
 ####Images
 
-```xml
+```html
 &lt;img src="http://www.fillmurray.com/300/300" alt="Placeholder Image">
 ```
         </section>
@@ -247,7 +253,7 @@ JavaScript possède *tout* cela.
 ## La Console
 La console est un outil interactif, construit dans le navigateur. Nous pouvons l'utiliser pour entrer des commandes et interagir directement avec une page web, entrer une information de diagnostic et vérifier s'il y a des erreurs. Nous l'utiliserons ajourd'hui pour écrire du code JavaScript. La console dans Chrome ressemble à ceci:
 
-![The Console](framework/img/workshop/the_console_x.jpg)
+![Les outils de développement Chrome; contrôles de l'inspecteur et de l'émulateur de périphérique, divers contrôles tels que les éléments, la console, le réseau, etc. Un contrôle de fermeture est disponible. Le contenu est entré dans la console en suivant une flèche bleue à angle droit.](framework/img/workshop/the_console_x.jpg)
 
 **Remarquez le symbole ```>```.** Il est utilisé par la console pour représenter un espace pour que vous puissiez entrer vos données sans qu'il ne soit nécessaire de le taper.
         </section>
@@ -257,8 +263,8 @@ La console est un outil interactif, construit dans le navigateur. Nous pouvons l
             <p>Dans Chrome, il y a plusieurs façons d'accéder à la Console.</p>
 
             <p>Use the keyboard shortcut: <br>
-            <code>COMMAND + OPTION + J</code> (MAC) <br>
-            <code>CONTROL + SHIFT + J</code> (WINDOWS/LINUX).</p>
+            <kbd>COMMAND</kbd> + <kbd>OPTION</kbd> + <kbd>J</kbd> (MAC) <br>
+            <kbd>CONTROL</kbd> + <kbd>SHIFT</kbd> + <kbd>J</kbd> (WINDOWS/LINUX).</p>
 
             <p>OU</p>
 
@@ -279,14 +285,14 @@ Expérimentons en tapant quelques données dans la console. Retournez dans **con
 
 Vous devriez voir quelque chose comme ça:
 
-![console number](framework/img/workshop/console-number.gif)
+![L'utilisateur saisissant dans la console la valeur «30» - la console renvoie 30 sur la ligne suivante.](framework/img/workshop/console-number.gif)
 
 Le symbole ```>``` est utilisé par la console pour représenter un espace pour vos données.
 Le symbole ```&lt;``` est utilisé par la console pour montrer la **valeur retournée** de vos données.
 
 Vous pouvez aussi entrer du texte, MAIS faites attention ! Quand vous utilisez du text, soyez sûres de le mettre entre guillemets (il y aura plus d'explication là-dessus bientôt).
 
-![console string](framework/img/workshop/console-string.gif)
+![L'utilisateur saisissant dans la console la valeur «bonjour» - la console renvoie «bonjour» sur la ligne suivante.](framework/img/workshop/console-string.gif)
 
 La commande que vous mettez dans la console est *évaluée* et une valeur vous est retournée.
         </section>
@@ -379,7 +385,7 @@ var phraseComplete = premier + " " + deuxieme;
             <div class="delayed">
                 <p>C'est tout à fait normal. N'oubliez pas, les variables sont utilisées pour <strong>contenir</strong> des valeurs jusqu'à ce que vous soyez prêts à les utiliser. <code>favFood</code> continue d'être associée à la valeur initiale donc elle ne retourne rien (undefined). Pour le moment, JavaScript ne sait pas que vous avez associé une valeur à la variable. Pour <strong>utiliser</strong> la variable, tapez simplement <code>favFood</code> dans la console. Ceci <strong>retournera</strong> la valeur qu'elle contenait.</p>
 
-                <img src="framework/img/workshop/console-fav-food.gif" alt="">
+                <img src="framework/img/workshop/console-fav-food.gif" alt="Types d'utilisateurs: var fav Food = 'pizza'. Types d'utilisateurs: aliments favoris, sorties de console, «pizza»">
             </div>
         </section>
         <section class="slide">
@@ -389,7 +395,7 @@ var phraseComplete = premier + " " + deuxieme;
 
             <pre><code>"Mon plat favori est " + favFood;</code></pre>
 
-            <p><img src="framework/img/workshop/console-concatenate.gif" alt="concatenate example" title=""></p>
+            <p><img src="framework/img/workshop/console-concatenate.gif" alt="Sortie console: var favFood = 'pizza'. Types d'utilisateurs: «Ma nourriture préférée est» + favFood" title=""></p>
 
             <p>Notez que quand nous exécutons une commande sans <code>var</code>, la valeur assignée de la variable nous est retournée plutôt que <code>undefined</code>. Rappelez-vous que <code>var</code> est utilisée comme <em>déclaration</em> et créée une variable qui elle retiendra la valeur que vous lui avez donné, jusqu'à son utilisation.</p>
 
@@ -417,7 +423,7 @@ var non fonctionnelle = 'This string value's the bomb!!!';
             et retournera une erreur.
 */
 ```
-```
+```javascript
 var aussifonctionelle = "Then I said: 'That string value was the bomb!!!' ";
 var aussinonfonctionnelle = "Then I said: "That string value was the bomb!!!" ";
 ```
@@ -475,11 +481,11 @@ Ces calculs fonctionnent de la même façon que ce soit des valeurs de nombres, 
             Pratiquons en utilisant des nombres & des opérateurs arithmétiques.
             `+` pour 'addition, `-` pour la soustraction, `*` pour la multiplication et `/` pour la division.
 
-            ![doing math in the console](framework/img/workshop/console-math.gif)
+            ![Types d'utilisateurs: 2 + 2, sorties console 4. Types d'utilisateurs: 2 - 2, sorties console 0.](framework/img/workshop/console-math.gif)
 
             Maintenant, essayez d'utiliser ces opérateurs avec des variables. Créons un programme qui peut calculer l'âge d'une personne. Créez deux variables, une pour  `currentYear` et l'autre pour `birthYear` et soustrayez ces valeurs.
 
-            ![doing math with variables in the console](framework/img/workshop/console-math-variables.gif)
+            ![Types d'utilisateurs: var année courante = 2014, sorties de console non définies. Types d'utilisateurs: var année de naissance = 1970, sorties de console non définies. Types d'utilisateurs: var age = année en cours - année de naissance, sorties de la console non définies. L'âge des types d'utilisateurs est supérieur à celui de la console 35.](framework/img/workshop/console-math-variables.gif)
         </section>
 
         <section class="slide" data-markdown>
@@ -502,7 +508,7 @@ Utilisez des enchaînements pour obtenir comme résultat final: "There are x sec
         <section class="slide" data-markdown>
 ## Exercise Solution
 
-![exercise 1 solution](framework/img/workshop/console-exercise-1.gif)
+![](framework/img/workshop/console-exercise-1.gif)
 ```javascript
 var secondsPerMinute = 60;
 var minutesPerHour = 60;
@@ -559,7 +565,7 @@ Pour accéder à la valeur d'une variable, utilisez le nom de la variable. Pour 
 myFavoriteThings[0];
 ```
 
-![array vs variables](framework/img/workshop/console-var-array.gif)
+![](framework/img/workshop/console-var-array.gif)
 
 Imaginez les *arrays* comme un carton d'oeufs. Tous les oeufs sont dans un seul carton, mais chacun à son propre petit espace.
 
@@ -727,7 +733,7 @@ prompt("What day is it today?");
 
 Peu importe la valeur qu'il y a dans les parenthèses, celle-ci sera passée dans la fonction.
 
-![console function example](framework/img/workshop/console-alert-prompt.gif)
+![Console, types d'utilisateurs: alerte ('Bonjour!') - une fenêtre contextuelle du navigateur apparaît avec 'Bonjour!'. Types d'utilisateurs: invite ('Quel jour est-il aujourd'hui') - une fenêtre contextuelle apparaît, posant la question avec une zone de saisie.](framework/img/workshop/console-alert-prompt.gif)
         </section>
 
         <section class="slide" data-markdown>
@@ -746,7 +752,7 @@ Dans l'exemple ci-haut, une nouvelle fonction`sayHello` est créé, mais comme l
 
 Nous avons déjà pratiqué le fait d'appeler une fonction. Vous vous rappelez de  `alert();` et `prompt();`?  Appelez simplement cette fonction en utilisant le nom de la fonction plus les parenthèses`()`. Ajoutons la déclaration de fonction ci-dessus dans la console et exécutons la en l'appelant.
 
-![console function example](framework/img/workshop/console-function.gif)
+![](framework/img/workshop/console-function.gif)
 
         </section>
         <section class="slide" data-markdown>
@@ -787,7 +793,7 @@ Maintenant, quand nous appelons la fonction, nous pouvons passer un argument dan
 
 Essayons le tout dans la console. Premièrement, ajoutez la fonction et appelez la. Vous pouvez appeler la fonction autant de fois que désiré avec différents arguments.
 
-![console function example](framework/img/workshop/console-function-param.gif)
+![](framework/img/workshop/console-function-param.gif)
         </section>
         <section class="slide" data-markdown>
 ##Paramètres multiples
@@ -856,7 +862,7 @@ Essayez ceci dans la console.
         <section class="slide centered">
             <h2>Ouf!</h2>
             <br>
-            <img style="max-width:500px" src="http://33.media.tumblr.com/2466ab981143fb18653f8f09bce061c7/tumblr_n982qbvyFQ1s5lf2ro1_400.gif">
+            <img style="max-width:500px" src="http://33.media.tumblr.com/2466ab981143fb18653f8f09bce061c7/tumblr_n982qbvyFQ1s5lf2ro1_400.gif" alt="Petite fille s'essuie le front d'épuisement.">
             <p>Et voici une courte introduction à JavaScript.</p>
         </section>
 
@@ -909,7 +915,7 @@ Chaque fois que vous voulez écrire ```jQuery```, utilisez tout simplement ```$`
 jQuery('.myClass');
 ```
 est la même chose que:
-```
+```javascript
 $('.myClass');
 ```
 C'est ce que nous ferons à partir de maintenant.
@@ -973,7 +979,7 @@ La librairie jQuery contient plusieurs fonctions et méthodes déjà incluses. V
             <p>Lorsque vous éditez dans un Codepen, vous pouver sélectionner l'icône d'engrenage dans la boîte de JS et vous verrez si une librairie est utilisée et de laquelle il s'agit.
                 Dans l'exemple au dessus, on voit que jQuery et jQuery UI sont utilisées.</p>
 
-            <img src="framework/img/workshop/codepen.png">
+            <img src="framework/img/workshop/codepen.png" alt="">
         </section>
 
         <section class="slide title" data-markdown>
@@ -984,7 +990,7 @@ La librairie jQuery contient plusieurs fonctions et méthodes déjà incluses. V
 ##Préparer son environnement de travail
 
 Pour le reste de la journée, vous travaillerez avec les fichiers inclus dans le dossier <strong>projet</strong>. Prenons un instant pour préparer notre environnement de travail.
-Dans le dossier que vous avez téléchargé aujourd'hui (**llc-intro-a-jquery-master**), il y a plusieurs dossiers et fichiers.
+Dans le dossier que vous avez téléchargé aujourd'hui (`llc-intro-a-jquery-master`), il y a plusieurs dossiers et fichiers.
 
     llc-intro-a-jquery-master
         |-- framework // Contient le nécessaire au diapos de cette présentation. Ne pas éditer!
@@ -1005,13 +1011,11 @@ Ouvrons notre nos fichiers de travail dans un navigateur et un éditeur de texte
 * Ouvrez Sublime Text et aller dans **File > Open**.
 * Naviguez dans le dossier **projet** (à l'intérieur du dossier que vous avez téléchargé avec les diapos d'aujourd'hui).
 * En sélectionnant tout le dossier, cliquez **Open**.
-* Le dossier apparaîtra dans la barre à gauche. Double-cliquez sur **index.html** pour l'ouvrir dans l'éditeur.
+* Le dossier apparaîtra dans la barre à gauche. Double-cliquez sur `index.html` pour l'ouvrir dans l'éditeur.
 * Faites clique-droit dans Sublime et sélectionnez **Open in Browser**. Cette action ouvrira la page HTML dans votre navigateur.
-    * Si Chrome n'est pas votre navigateur par défaut, allez dans Window/Finder et naviguez dans le dossier **projet**, clique-droit sur **index.html** et choisissez **Open With > Chrome**
+    * Si Chrome n'est pas votre navigateur par défaut, allez dans Window/Finder et naviguez dans le dossier **projet**, clique-droit sur `index.html` et choisissez **Open With > Chrome**
 
-Vous devriez voir ceci dans Sublime Text:
-
-![open project](framework/img/workshop/open-project.png)
+![](framework/img/workshop/open-project.png)
         </section>
         <section class="slide">
             <h2>Utiliser jQuery</h2>
@@ -1036,7 +1040,7 @@ Vous devriez voir ceci dans Sublime Text:
             <p>Pour utiliser le CDN de jQuery (le lien est sur la page de téléchargement), indiquez la source directement plutôt que de pointer vers le fichier dans votre répertoire de projet. Soyez certaine d'inclure le "http://" quand vous travaillez localement (sur votre ordinateur).</p>
             <pre><code class="xml">&lt;script src="http://code.jquery.com/jquery-1.11.0.min.js">&lt;/script></code></pre>
 
-            <p>Insérez-le dans votre page <strong>index.html</strong>, maintenant.</p>
+            <p>Insérez-le dans votre page <code>index.html</code>, maintenant.</p>
 
             <div class="presenter-notes">
                 <p>The examples in jQuery's Learning Center uses the script at the bottom so use it this way to be consistent.</p>
@@ -1058,7 +1062,7 @@ Vous devriez voir ceci dans Sublime Text:
 </code></pre>
             <p>Maintenant, que nous avons lié le fichier jQuery, nous pouvons accéder à toutes les commandes écrites dans ce document et utiliser toutes ses fonctonnalités.</p>
 
-            <p>Génail! Ouvrons <strong>index.html</strong> dans Chrome ou rafraîchissez la page que vous avez déjà ouverte et voyez ce que jQuery fait quand vous l'incluez dans un fichier HTML.</p>
+            <p>Génail! Ouvrons <code>index.html</code> dans Chrome ou rafraîchissez la page que vous avez déjà ouverte et voyez ce que jQuery fait quand vous l'incluez dans un fichier HTML.</p>
         </section>
         <section class="slide" data-markdown>
 ## Remarquez-vous des différences à votre projet?
@@ -1116,7 +1120,7 @@ $("p.highlight").css("background-color", "yellow");
 ```
 Avant d'ajouter cela:
 
-```xml
+```html
 &lt;p class="highlight">Ceci est un important paragraphe surligné&lt;/p>
 ```
 
@@ -1159,7 +1163,7 @@ Les commentaires multi-lignes sont géniaux pour «cacher» des blocs de code si
         </section>
         <section class="slide">
             <h2>Faison enfin quelque chose!!!</h2>
-            <p>Retournons à Sublime et à <strong>index.html</strong>. Sous la balise jQuery, ajoutez une autre balise script pour y ajouter - enfin - votre propre code.</p>
+            <p>Retournons à Sublime et à <code>index.html</code>. Sous la balise jQuery, ajoutez une autre balise script pour y ajouter - enfin - votre propre code.</p>
 <pre><code class="xml">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
 
@@ -1175,7 +1179,7 @@ Les commentaires multi-lignes sont géniaux pour «cacher» des blocs de code si
 </code></pre>
 
             <p>Dans la section des favoris, voici 4 images adorables d'un chien.</p>
-            <img src="framework/img/workshop/Screen-Shot-1.png.jpg" alt="">
+            <img src="framework/img/workshop/Screen-Shot-1.png.jpg" alt="Section 'Mes choses préférées' avec quatre images d'un chien.">
             <p>Ayons du fun avec!</p>
         </section>
         <section class="slide">
@@ -1185,11 +1189,11 @@ Les commentaires multi-lignes sont géniaux pour «cacher» des blocs de code si
 
 <pre class="xml"><code>&lt;section id="favourites" class="favourites container"&gt;
     &lt;h2&gt;My Favourite Things&lt;/h2&gt;
-    &lt;h3&gt;Here are a few things I really love&lt;/h3&gt;
-    &lt;img class="fav-img" src="images/puppy_rest.jpg"&gt;
-    &lt;img class="fav-img" src="images/puppy_rest.jpg"&gt;
-    &lt;img class="fav-img" src="images/puppy_rest.jpg"&gt;
-    &lt;img class="fav-img" src="images/puppy_rest.jpg"&gt;
+    &lt;p&gt;Here are a few things I really love&lt;/p&gt;
+    &lt;img class="fav-img" src="images/puppy_rest.jpg" alt="texte alternatif descriptif"&gt;
+    &lt;img class="fav-img" src="images/puppy_rest.jpg" alt="texte alternatif descriptif"&gt;
+    &lt;img class="fav-img" src="images/puppy_rest.jpg" alt="texte alternatif descriptif"&gt;
+    &lt;img class="fav-img" src="images/puppy_rest.jpg" alt="texte alternatif descriptif"&gt;
 &lt;/section&gt;
 </code></pre>
 
@@ -1210,7 +1214,7 @@ $(document).ready(function(){
 ```
 Savegardez le fichier dans Sublime, allez dans Chrome, rafraîchissez la page. Si vous avez réussi, voici le résultat que vous devriez obtenir:
 
-![That's a Tiny Toller](framework/img/workshop/Screen-Shot-2.png.jpg)
+![Section 'Mes choses préférées' avec quatre images plus petites d'un chien.](framework/img/workshop/Screen-Shot-2.png.jpg)
 
         </section>
         <section class="slide" data-markdown>
@@ -1223,7 +1227,7 @@ $(document).ready(function(){
 ```
 Voici le résultat que vous devriez obtenir:
 
-![That's a HUGE Toller](framework/img/workshop/Screen-Shot-3.png.jpg)
+![Section 'Mes choses préférées' avec quatre grandes images d'un chien.](framework/img/workshop/Screen-Shot-3.png.jpg)
 
         </section>
         <section class="slide" data-markdown>
@@ -1237,7 +1241,7 @@ Comme l'événement <em>document ready</em>, un <em>click event</em> est un mome
 
 Ajouter une fonction à événement déclanché par un utilisateur s'appelle un **event listener**. Le code est présent et attend, aux aguets qu'un événement survienne. Quand l'usager clique finalement sur l'item, le déclanchement est capté et la fonction est exécutée.
 
-Nous passerons au travers d'un exemple ensemble, mais vous pouvez accéder à la documentation par ici: [http://api.jquery.com/click/](http://api.jquery.com/click/)
+Nous passerons au travers d'un exemple ensemble, mais vous pouvez accéder à la documentation par ici: [api.jquery.com/click](http://api.jquery.com/click/)
         </section>
 
         <section class="slide">
@@ -1277,7 +1281,7 @@ $(".fav-img").click(function(){
 ```
 Rafraîchissez votre page, ouvrez la console dans votre page et cliquez sur une image. Vous devriez voir le message passer dans la méthode `console.log()` comme ça:
 
-![console.log example](framework/img/workshop/console-log.gif)
+![La souris clique sur une image, la console affiche 'Ça marche!'](framework/img/workshop/console-log.gif)
         </section>
 
         <section class="slide" data-markdown>
@@ -1297,7 +1301,7 @@ Le code ci-dessous prendra l'image cliquée et va **dynamiquement** ajouter du C
 
 Ajoutons-le à notre projet et **inspectons l'élément** pour voir comment jQuery ajoute ces changements. Vous devriez vous quelque chose comme la captude d'écran ci-dessous, dans votre console.
 
-![show hide console example](framework/img/workshop/console-show-hide.png)
+![Outils de développement Chrome, élément insector: caractéristiques de l'élément image, 'style = display: none;'.](framework/img/workshop/console-show-hide.png)
         </section>
 
         <section class="slide" data-markdown>
@@ -1427,9 +1431,9 @@ Débutons !
 
                 <p>C'est parce que vous n'avez pas ajouté le style dans le fichier CSS encore. Vous pouvez toujours vérifier s'il a été ajouté au HTML. Si votre console est toujours ouverte, cliquez simplement sur l'onglet “Elements”.</p>
 
-                <p><img src="framework/img/workshop/console-menu-active.gif" alt="" title=""> </p>
+                <p><img src="framework/img/workshop/console-menu-active.gif" alt="L'utilisateur clique sur le lien, les sorties de la console: «Ça marche! Les outils de développement Chrome s'affichent, class = 'active' sur le lien." title=""> </p>
 
-                <p>Maintenant, allez dans <strong>style.css</strong> pour créer un nouveau style CSS pour l'état actif. C'est ce qui changera la couleur (mais vous pouvez ajouter le style qui vous plaît). Puisque la couleur a été ajoutée à <code>.menu a</code>, créez un sélecteur utilisant la nouvelles classe <code>active</code>.</p>
+                <p>Maintenant, allez dans <code>style.css</code> pour créer un nouveau style CSS pour l'état actif. C'est ce qui changera la couleur (mais vous pouvez ajouter le style qui vous plaît). Puisque la couleur a été ajoutée à <code>.menu a</code>, créez un sélecteur utilisant la nouvelles classe <code>active</code>.</p>
 
 <pre><code>.menu a.active {
     color: #A8258D;
@@ -1535,7 +1539,7 @@ Nous utiliserons le plugin FlexSlider aujourd'hui pour ajouter un carousel d'ima
 
 À sa plus simple expression un rotateur est une liste d'images qui utilise JavaScript pour montrer une image à la fois, puis la suivante, puis la suivante... Le HTML aurait normalement l'air de ça:
 
-```xml
+```html
 &lt;div id="rotator">
     &lt;ul class="slides">
         &lt;li>&lt;img src="img/rotator/image1.jpg" alt="First Slide">&lt;/li>
@@ -1556,19 +1560,18 @@ Le javascript montre la première et cache le reste. Puis, après quelques secon
 
             <p>Cliquez sur le gros bouton vert pour télécharger le fichier zip. Inclus dans ce téléchargement vous trouverez plusieurs autres fichiers nécessaires au bon fonctionnement du plugin ainsi que d'autres dédiés uniquement à des fins de démonstrations. Vous verez quelque chose comme ceci:</p>
 
-            <p><img src="framework/img/workshop/flexslider-contents.png" alt="Flexslider in the project directory" title=""></p>
+            <p><img src="framework/img/workshop/flexslider-contents.png" alt="Fichier zip Flexslider extrait; images, démo, répertoire des polices, flexslider.css, jquery.flexslider.js, etc." title=""></p>
 
             <p>Voici les fichiers que vous devez <strong>copier</strong> dans votre dossier projet, dans la bonne filière.</p>
             <ul>
-                <li>Le dossier <strong>fonts</strong> en entier dans le dossier <strong>project</strong></li>
-                <li>flexslider.css dans le dossier <strong>css</strong></li>
-                <li>images > bg_play_pause.png va dans le dossier <strong>project > images</strong></li>
-                <li>jquery.flexslider-min.js va dans le dossier <strong>project > js</strong></li>
+                <li>Le dossier <code>fonts</code> en entier dans le dossier <code>project</code></li>
+                <li><code>flexslider.css</code> dans le dossier <code>css</code></li>
+                <li><code>images</code> > <code>bg_play_pause.png</code> va dans le dossier <code>project</code> > <code>images</code></li>
+                <li><code>jquery.flexslider-min.js</code> va dans le dossier <code>project</code> > <code>js</code></li>
             </ul>
 
-            <p>Votre dosser de projet devrait maintenant avoir l'air de ceci:</p>
             <img src="framework/img/workshop/folders-with-flexslider.png" alt="">
-            <p>Vos fichiers d'images peuvent varier, mais assurez-vous que <strong>bg_play_pause.png</strong> soit inclus.</p>
+            <p>Vos fichiers d'images peuvent varier, mais assurez-vous que <code>bg_play_pause.png</code> soit inclus.</p>
 
             <div class="presenter-notes">
                 <p>As you start this slide, tell the mentors to help to make sure all the learners are complete this step before moving on. Explain that people may vary on how they create their folder structures but that it's import to understand how to link to the proper directory folders.</p>
@@ -1578,7 +1581,7 @@ Le javascript montre la première et cache le reste. Puis, après quelques secon
             <h2>Ajouter le Flexslider à son projet: Étape 1</h2>
             <p>Maintenant que les fichiers pertinents du plugin sont sauvegardés dans votre répertoire, reliez-les à votre page HTML.</p>
 
-            <p>Retournez à votre fichier <strong> index.html </strong> et ajoutez le fichier de Flexslider (<strong>jquery.flexslider-min.js</strong>) <em>après</em> la librairie jQuery <nobr>(<strong>jquery-1.11.1.min.js</strong>).</nobr></p>
+            <p>Retournez à votre fichier <code> index.html </code> et ajoutez le fichier de Flexslider (<code>jquery.flexslider-min.js</code>) <em>après</em> la librairie jQuery <nobr>(<code>jquery-1.11.1.min.js</code>).</nobr></p>
 <pre><code class="html">&lt;script src="js/jquery-1.11.1.min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script src="js/jquery.flexslider-min.js"&gt;&lt;&#47;&#115;cript&gt;
 &lt;script&gt;
@@ -1587,7 +1590,7 @@ $(document).ready(function(){
 });
 &lt;&#47;&#115;cript&gt;
 </code></pre>
-            <p>FlexSlider vient aussi avec son propre fichier CSS. Soyez certaines de l'inclure dans la section <code>&lt;head></code> <em>avant</em> style.css.</p>
+            <p>FlexSlider vient aussi avec son propre fichier CSS. Soyez certaines de l'inclure dans la section <code>&lt;head></code> <em>avant</em> <code>style.css</code>.</p>
 
 <pre><code>&lt;head&gt;
     &lt;title&gt;Page Title&lt;/title&gt;
@@ -1597,7 +1600,7 @@ $(document).ready(function(){
     &lt;link rel=&quot;stylesheet&quot; href=&quot;css/style.css&quot;&gt;
 &lt;/head&gt;
 </code></pre>
-            <p><strong>Note:</strong> il s'agit d'une manière d'organiser votre répertoire. Certaines préfèrent créer un dossier <strong>plugins</strong> pour y mettre ces types de fichiers. Soyez seulement certaines que les liens (<em>path</em>) vers vos fichiers js, images et styles sont bien écrits.</p>
+            <p><strong>Note:</strong> il s'agit d'une manière d'organiser votre répertoire. Certaines préfèrent créer un dossier <code>plugins</code> pour y mettre ces types de fichiers. Soyez seulement certaines que les liens (<em>path</em>) vers vos fichiers js, images et styles sont bien écrits.</p>
         </section>
 
         <section class="slide" data-markdown>
@@ -1605,14 +1608,14 @@ $(document).ready(function(){
 
 Maintenant, écrivons le HTML pour créer la structure du slider. Dans la documentation du Flexslider, le code est fourni. Il est important d'utiliser la même structure avec les mêmes classes ou id parce que la plus part du temps ils sont utilisés à des fins spécifiques dans le code.
 
-Vous pouvez biensûr mettre à jour la source (src) des images pour y mettre les vôtres. Si vous n'avez pas d'image en ce moment, il y en a dans votre dossier **images > rotator**.
+Vous pouvez biensûr mettre à jour la source (src) des images pour y mettre les vôtres. Si vous n'avez pas d'image en ce moment, il y en a dans votre dossier `images` > `rotator`.
 
-```xml
+```html
 &lt;div class=&quot;flexslider&quot;&gt;
   &lt;ul class=&quot;slides&quot;&gt;
-    &lt;li&gt;&lt;img src=&quot;images/rotator/image1.jpg&quot;&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src=&quot;images/rotator/image2.jpg&quot;&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src=&quot;images/rotator/image3.jpg&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;images/rotator/image1.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;images/rotator/image2.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;img src=&quot;images/rotator/image3.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/div&gt;
 ```
@@ -1620,12 +1623,12 @@ Vous pouvez mettre ce code où vous le désirez sur votre page. Sauvegardez le f
 
 **Note!** Vous verrez dans l'exemple dans la documentation de Flexislider une balise d'image avec un bare oblique d'extra à la fin de la balise. Il s'agit de la syntaxe XHTML (l'ancienne version). HTML5 ne l'exige pas.
 
-```xml
+```html
 &lt;!-- XHTML -->
-&lt;img src=&quot;path/to/file.jpg&quot; /&gt;
+&lt;img src=&quot;path/to/file.jpg&quot; alt=&quot;Texte alternatif descriptif&quot; /&gt;
 
 &lt;!-- HTML5 -->
-&lt;img src=&quot;path/to/file.jpg&quot;&gt;
+&lt;img src=&quot;path/to/file.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;
 
 ```
 
@@ -1664,7 +1667,7 @@ Dépendamment de l'apparence souhaitée pour votre slider, il peut être trop gr
 
 Aussi, il se peut que les flèches de gauche & de droite soient manquantes. Si le vôtre ressemble à la capture d'écran ci-dessous, c'est correct. Il est possible de le modifier.
 
-![flexslider default](framework/img/workshop/flexslider-default.png)
+![Flexslider avec des icônes de flèche cassée.](framework/img/workshop/flexslider-default.png)
         </section>
         <section class="slide" data-markdown>
 ## Reponsive?
@@ -1673,20 +1676,20 @@ Flexslider possède le nécessaire pour être *responsive*. C'est pour cette rai
 
 Nous pouvons modifier le tout avec un peu de HTML & CSS pour maintenir sa nature *responsive*. Ajoutons un élément conteneur autour du Flexslider comme ceci:
 
-```
+```html
 &lt;div class=&quot;flexslider-wrap&quot;&gt;&lt;!-- nouveau conteneur --&gt;
 
     &lt;div class=&quot;flexslider&quot;&gt;
         &lt;ul class=&quot;slides&quot;&gt;
-            &lt;li&gt;&lt;img src=&quot;images/rotator/image1.jpg&quot;&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;img src=&quot;images/rotator/image2.jpg&quot;&gt;&lt;/li&gt;
-            &lt;li&gt;&lt;img src=&quot;images/rotator/image3.jpg&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src=&quot;images/rotator/image1.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src=&quot;images/rotator/image2.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;img src=&quot;images/rotator/image3.jpg&quot; alt=&quot;Texte alternatif descriptif&quot;&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
 
 &lt;/div&gt;&lt;!-- fermeture du nouveau conteneur --&gt;
 ```
-Puis ajouter le css dans **styles.css** pour changer la taille dudit conteneur.
+Puis ajouter le css dans `styles.css` pour changer la taille dudit conteneur.
 
     .flexslider-wrap {
         width: 50%; /* rend le slider 50% de la taille de son conteneur */
@@ -1705,7 +1708,7 @@ Choisissez la largeur de vos images selon VOS besoins, c'est-à-dire à la large
 
 Maintenant, arrangeons ces flèches. Normalement, lorsque vous voyez une image brisée ou un truc qui ne fonctionnement correctement le premier réflexe à avoir est de vérifier « est-ce que tous mes fichiers sont là où ils devraient être ? »
 
-Dans **flexslider.css**, la source des *fonts* ressemble à ceci:
+Dans `flexslider.css`, la source des *fonts* ressemble à ceci:
 
     @font-face {
         font-family: 'flexslider-icon';
@@ -1718,7 +1721,7 @@ Dans **flexslider.css**, la source des *fonts* ressemble à ceci:
         font-style: normal;
     }
 
-Dans l'étape précécente, nous avons mis notre dossier **fonts** à l'extérieur de notre dossier **css**. Cette source CSS a besoin d'être mis à jour pour rejoindre les fichiers là où ils sont.
+Dans l'étape précécente, nous avons mis notre dossier `fonts` à l'extérieur de notre dossier `css`. Cette source CSS a besoin d'être mis à jour pour rejoindre les fichiers là où ils sont.
 
 Mise à jour:
 
@@ -1733,9 +1736,9 @@ Mise à jour:
         font-style: normal;
     }
 
-Votre point de départ est **flexslider.css**. Le `../` signifie « Sors et remonte d'un dossier », puis va dans le dossier **fonts**. Allez-y faites le changement.
+Votre point de départ est `flexslider.css`. Le `../` signifie « Sors et remonte d'un dossier », puis va dans le dossier `fonts`. Allez-y faites le changement.
 
-Une autre option serait de déplacer le dossier **fonts** à l'intérieur du fichier **css**. La source du fichier css doit seulement refléter la structure du répertoire.
+Une autre option serait de déplacer le dossier `fonts` à l'intérieur du fichier `css`. La source du fichier css doit seulement refléter la structure du répertoire.
 
         </section>
 
@@ -1818,10 +1821,10 @@ Voici [un lien vers la diapo](index.html#slide79) avec d'autres plugins amusants
 
 Voici aussi d'autres ressources utiles:
 
-* http://learn.jquery.com/
-* http://try.jquery.com/
+* [learn.jquery.com](http://learn.jquery.com/)
+* [try.jquery.com](http://try.jquery.com/)
 
-Oh et ce merveilleux livre: http://javascriptbook.com/
+Oh et ce merveilleux livre: [javascriptbook.com](http://javascriptbook.com/)
         </section>
 
         <section class="slide" data-markdown>
@@ -1882,6 +1885,7 @@ Vous vous sentez aventureuse ? Essayez [Hosting Static Sites on Github for Begin
     <script src="framework/scripts/plugins/markdown/markdown.js"></script>
     <!-- <script src="framework/scripts/plugins/highlight/highlight.js"></script> -->
     <script src="framework/scripts/plugins/highlight/highlight-8.4.min.js"></script>
+    <script src="framework/scripts/plugins/a11y/plugin.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
 
     <script>

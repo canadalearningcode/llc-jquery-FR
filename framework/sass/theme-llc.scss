@@ -15,7 +15,7 @@
 	box-sizing: border-box;
 }
 
-/* updated clearfix hack: 
+/* updated clearfix hack:
 http://css-tricks.com/snippets/css/clear-fix/ */
 .group:after {
 	content: "";
@@ -59,7 +59,7 @@ h1, h2 {
 h2 {
 	font-size: $font-size-h2;
 
-	code {
+	code, kbd {
 		font-size: inherit;
 		font-weight: normal;
 		background: none;
@@ -94,11 +94,11 @@ a {
 pre {
 	margin: 8px 0;
 
-	code {
+	code, kbd {
 		overflow-y: auto;
 	}
 }
-code {
+code, kbd {
 	font-family: Monaco, Andale Mono, monospace;
 	color: #444;
 	padding: 1px 4px;
@@ -114,8 +114,8 @@ code {
 .slide {
 	padding: 45px 5%;
 	height: 96%;
-	
-	// Adds extra space to the bottom of the slides to allow 
+
+	// Adds extra space to the bottom of the slides to allow
 	// presenters to scroll the page up so people in the back
 	// of the room can see the bottom of the slides.
 	&:after {
@@ -202,7 +202,7 @@ textarea.snippet {
 	padding: 2px 7px;
 	position: relative;
 	bottom: -10px;
-	right: 8px; 
+	right: 8px;
 	margin-bottom: -25px;
 }
 
@@ -233,14 +233,14 @@ table {
 }
 
 /* Incremental slides */
-.delayed.displayed, 
+.delayed.displayed,
 .delayed-children > .displayed {
     opacity: 1;
 }
 
-/* 
+/*
 Background color style for headings
-Use spans wrap inside of a heading for div. 
+Use spans wrap inside of a heading for div.
 e.g.
 <h1 class="title-bg">
   <span>Welcome to </span><br>
@@ -262,7 +262,7 @@ e.g.
 		}
 	}
 	&.connected {
-		span { 
+		span {
 			display: inline-block;
 			padding: 6px 15px;
 		}
@@ -277,9 +277,9 @@ e.g.
 ------------------------*/
 .intro {
 	/*uncomment this if you don't want to use a background image */
-	// background: $gray-dark; 
+	// background: $gray-dark;
 	background: linear-gradient(rgba($black, 0.1),
-		          rgba($black, 0.8)), 
+		          rgba($black, 0.8)),
 	            url(../img/banner-home2.jpg) no-repeat;
 	background-size: cover;
 	color: $white;
@@ -434,4 +434,10 @@ footer {
 			vertical-align: middle;
 		}
 	}
+}
+
+kbd, table kbd {
+  background: #fff;
+  border: 1px solid #d1d5da;
+  box-shadow: inset 0 -1px 0 #d1d5da;
 }
